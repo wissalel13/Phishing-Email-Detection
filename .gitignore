@@ -1,0 +1,35 @@
+# --- Environnements Python ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Éditeurs / système ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Secrets et configuration locale ---
+.env
+*.env
+
+# --- Données : corpus brut (107 Mo, dépasse la limite GitHub de 100 Mo) et fichiers dérivés ---
+# (licence du corpus à vérifier avant toute redistribution ; reconstruits par les notebooks 01 et 02)
+data/raw/
+data/external/
+data/interim/
+data/processed/
+
+# --- Fichiers temporaires ---
+*.log
+*.tmp
+

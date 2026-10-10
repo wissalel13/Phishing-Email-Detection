@@ -1,0 +1,702 @@
+{
+  "modèle": "logreg",
+  "seuil_opérationnel": 0.4648,
+  "zone_incertitude": [
+    0.1173,
+    0.9287
+  ],
+  "seuils_alerte": {
+    "recall_min": 0.9,
+    "fpr_max": 0.1,
+    "dégradation_max": 0.05
+  },
+  "jeux": [
+    {
+      "jeu": "test d'origine (référence)",
+      "famille": "référence",
+      "n": 15511,
+      "n_phishing": 7675,
+      "n_légitime": 7836,
+      "recall": 0.9827,
+      "fpr": 0.0288,
+      "précision": 0.9709,
+      "average_precision": 0.9973,
+      "roc_auc": 0.9973,
+      "part_zone_incertitude": 0.1005,
+      "recall_ic": [
+        0.9797,
+        0.9855
+      ],
+      "fpr_ic": [
+        0.0258,
+        0.0329
+      ]
+    },
+    {
+      "jeu": "mini-jeu étendu (100)",
+      "famille": "externe",
+      "n": 100,
+      "n_phishing": 50,
+      "n_légitime": 50,
+      "recall": 0.82,
+      "fpr": 0.58,
+      "précision": 0.5857,
+      "average_precision": 0.7229,
+      "roc_auc": 0.6976,
+      "part_zone_incertitude": 0.42,
+      "recall_ic": [
+        0.72,
+        0.92
+      ],
+      "fpr_ic": [
+        0.46,
+        0.72
+      ]
+    },
+    {
+      "jeu": "mini-jeu à la main (24)",
+      "famille": "main",
+      "n": 24,
+      "n_phishing": 12,
+      "n_légitime": 12,
+      "recall": 0.75,
+      "fpr": 0.4167,
+      "précision": 0.6429,
+      "average_precision": 0.7094,
+      "roc_auc": 0.7083,
+      "part_zone_incertitude": 0.2917,
+      "recall_ic": [
+        0.5,
+        0.9604
+      ],
+      "fpr_ic": [
+        0.1667,
+        0.7104
+      ]
+    },
+    {
+      "jeu": "  dont phishing modernes (P01-P12)",
+      "famille": "main",
+      "n": 12,
+      "n_phishing": 12,
+      "n_légitime": 0,
+      "recall": 0.75,
+      "fpr": null,
+      "précision": null,
+      "average_precision": null,
+      "roc_auc": null,
+      "part_zone_incertitude": 0.3333,
+      "recall_ic": [
+        0.5,
+        0.9604
+      ],
+      "fpr_ic": [
+        null,
+        null
+      ]
+    },
+    {
+      "jeu": "  dont légitimes difficiles (L01-L12)",
+      "famille": "main",
+      "n": 12,
+      "n_phishing": 0,
+      "n_légitime": 12,
+      "recall": null,
+      "fpr": 0.4167,
+      "précision": null,
+      "average_precision": null,
+      "roc_auc": null,
+      "part_zone_incertitude": 0.25,
+      "recall_ic": [
+        null,
+        null
+      ],
+      "fpr_ic": [
+        0.1667,
+        0.7104
+      ]
+    },
+    {
+      "jeu": "tranche : longueur (0.999, 38.0]",
+      "famille": "tranche",
+      "n": 4023,
+      "n_phishing": 2880,
+      "n_légitime": 1143,
+      "recall": 0.983,
+      "fpr": 0.0665,
+      "précision": 0.9739,
+      "average_precision": 0.9977,
+      "roc_auc": 0.9942,
+      "part_zone_incertitude": 0.1424,
+      "recall_ic": [
+        0.9779,
+        0.9872
+      ],
+      "fpr_ic": [
+        0.0534,
+        0.0805
+      ]
+    },
+    {
+      "jeu": "tranche : longueur (38.0, 75.0]",
+      "famille": "tranche",
+      "n": 3768,
+      "n_phishing": 2157,
+      "n_légitime": 1611,
+      "recall": 0.9879,
+      "fpr": 0.0279,
+      "précision": 0.9793,
+      "average_precision": 0.9987,
+      "roc_auc": 0.9982,
+      "part_zone_incertitude": 0.0974,
+      "recall_ic": [
+        0.9833,
+        0.9921
+      ],
+      "fpr_ic": [
+        0.0202,
+        0.0354
+      ]
+    },
+    {
+      "jeu": "tranche : longueur (75.0, 168.0]",
+      "famille": "tranche",
+      "n": 3858,
+      "n_phishing": 1258,
+      "n_légitime": 2600,
+      "recall": 0.9706,
+      "fpr": 0.0212,
+      "précision": 0.9569,
+      "average_precision": 0.9962,
+      "roc_auc": 0.998,
+      "part_zone_incertitude": 0.0918,
+      "recall_ic": [
+        0.9618,
+        0.9793
+      ],
+      "fpr_ic": [
+        0.0158,
+        0.0269
+      ]
+    },
+    {
+      "jeu": "tranche : longueur (168.0, 13986.0]",
+      "famille": "tranche",
+      "n": 3862,
+      "n_phishing": 1380,
+      "n_légitime": 2482,
+      "recall": 0.9848,
+      "fpr": 0.0201,
+      "précision": 0.9645,
+      "average_precision": 0.9954,
+      "roc_auc": 0.9975,
+      "part_zone_incertitude": 0.0686,
+      "recall_ic": [
+        0.9783,
+        0.9913
+      ],
+      "fpr_ic": [
+        0.0147,
+        0.0262
+      ]
+    },
+    {
+      "jeu": "tranche : avec URL",
+      "famille": "tranche",
+      "n": 7320,
+      "n_phishing": 3795,
+      "n_légitime": 3525,
+      "recall": 0.9868,
+      "fpr": 0.0298,
+      "précision": 0.9727,
+      "average_precision": 0.9977,
+      "roc_auc": 0.9976,
+      "part_zone_incertitude": 0.0956,
+      "recall_ic": [
+        0.983,
+        0.9903
+      ],
+      "fpr_ic": [
+        0.0242,
+        0.0353
+      ]
+    },
+    {
+      "jeu": "tranche : sans URL",
+      "famille": "tranche",
+      "n": 8191,
+      "n_phishing": 3880,
+      "n_légitime": 4311,
+      "recall": 0.9786,
+      "fpr": 0.0281,
+      "précision": 0.9691,
+      "average_precision": 0.9969,
+      "roc_auc": 0.9969,
+      "part_zone_incertitude": 0.1049,
+      "recall_ic": [
+        0.9738,
+        0.9831
+      ],
+      "fpr_ic": [
+        0.0232,
+        0.0333
+      ]
+    }
+  ],
+  "robustesse": [
+    {
+      "test": "tronqué à 30 mots",
+      "n": 15511,
+      "recall avant": 0.9826710098,
+      "recall après": 0.9726384365,
+      "Δ recall": -0.0100325733,
+      "fpr avant": 0.0288412455,
+      "fpr après": 0.0755487494,
+      "Δ fpr": 0.0467075038,
+      "zone incertaine après": 0.1870285604,
+      "alerte": "ok"
+    },
+    {
+      "test": "tronqué à 12 mots",
+      "n": 15511,
+      "recall avant": 0.9826710098,
+      "recall après": 0.9538762215,
+      "Δ recall": -0.0287947883,
+      "fpr avant": 0.0288412455,
+      "fpr après": 0.1715160796,
+      "Δ fpr": 0.1426748341,
+      "zone incertaine après": 0.3023015924,
+      "alerte": "ALERTE"
+    },
+    {
+      "test": "URLs retirées",
+      "n": 15511,
+      "recall avant": 0.9826710098,
+      "recall après": 0.9807166124,
+      "Δ recall": -0.0019543974,
+      "fpr avant": 0.0288412455,
+      "fpr après": 0.0279479326,
+      "Δ fpr": -0.0008933129,
+      "zone incertaine après": 0.1039907163,
+      "alerte": "ok"
+    },
+    {
+      "test": "obfuscation par chiffres (15 % des mots)",
+      "n": 15511,
+      "recall avant": 0.9826710098,
+      "recall après": 0.9809771987,
+      "Δ recall": -0.0016938111,
+      "fpr avant": 0.0288412455,
+      "fpr après": 0.0329249617,
+      "Δ fpr": 0.0040837162,
+      "zone incertaine après": 0.1125008059,
+      "alerte": "ok"
+    },
+    {
+      "test": "texte neutre ajouté",
+      "n": 15511,
+      "recall avant": 0.9826710098,
+      "recall après": 0.7494462541,
+      "Δ recall": -0.2332247557,
+      "fpr avant": 0.0288412455,
+      "fpr après": 0.0051046452,
+      "Δ fpr": -0.0237366003,
+      "zone incertaine après": 0.1983108762,
+      "alerte": "ALERTE"
+    },
+    {
+      "test": "mots-raccourcis ajoutés aux phishings",
+      "n": 7675,
+      "recall avant": 0.9826710098,
+      "recall après": 0.1865798046,
+      "Δ recall": -0.7960912052,
+      "fpr avant": null,
+      "fpr après": null,
+      "Δ fpr": null,
+      "zone incertaine après": 0.1705537459,
+      "alerte": "ALERTE"
+    },
+    {
+      "test": "pied de newsletter ajouté aux légitimes",
+      "n": 7836,
+      "recall avant": null,
+      "recall après": null,
+      "Δ recall": null,
+      "fpr avant": 0.0288412455,
+      "fpr après": 0.2905819296,
+      "Δ fpr": 0.261740684,
+      "zone incertaine après": 0.3060234814,
+      "alerte": "ALERTE"
+    }
+  ],
+  "mini_jeu_main": [
+    {
+      "id": "P01",
+      "catégorie": "phishing poli (identifiants)",
+      "label": 1,
+      "p": 0.9869,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "P02",
+      "catégorie": "phishing ciblé sans mots de spam",
+      "label": 1,
+      "p": 0.234,
+      "prédit": 0,
+      "zone": "incertain"
+    },
+    {
+      "id": "P03",
+      "catégorie": "phishing poli (facture)",
+      "label": 1,
+      "p": 0.9883,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "P04",
+      "catégorie": "phishing poli (partage de document)",
+      "label": 1,
+      "p": 0.9482,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "P05",
+      "catégorie": "fraude au président (sans lien)",
+      "label": 1,
+      "p": 0.1839,
+      "prédit": 0,
+      "zone": "incertain"
+    },
+    {
+      "id": "P06",
+      "catégorie": "phishing poli (colis)",
+      "label": 1,
+      "p": 0.9791,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "P07",
+      "catégorie": "phishing poli (alerte banque)",
+      "label": 1,
+      "p": 0.9992,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "P08",
+      "catégorie": "phishing poli (mot de passe)",
+      "label": 1,
+      "p": 0.8394,
+      "prédit": 1,
+      "zone": "incertain"
+    },
+    {
+      "id": "P09",
+      "catégorie": "phishing poli (remboursement)",
+      "label": 1,
+      "p": 0.9401,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "P10",
+      "catégorie": "fraude classique (témoin)",
+      "label": 1,
+      "p": 0.9975,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "P11",
+      "catégorie": "fausse offre d'emploi",
+      "label": 1,
+      "p": 0.9165,
+      "prédit": 1,
+      "zone": "incertain"
+    },
+    {
+      "id": "P12",
+      "catégorie": "phishing QR code",
+      "label": 1,
+      "p": 0.0004,
+      "prédit": 0,
+      "zone": "tranché"
+    },
+    {
+      "id": "L01",
+      "catégorie": "légitime transactionnel alarmant",
+      "label": 0,
+      "p": 0.8689,
+      "prédit": 1,
+      "zone": "incertain"
+    },
+    {
+      "id": "L02",
+      "catégorie": "légitime transactionnel alarmant",
+      "label": 0,
+      "p": 0.9794,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "L03",
+      "catégorie": "légitime transactionnel (facture)",
+      "label": 0,
+      "p": 0.7174,
+      "prédit": 1,
+      "zone": "incertain"
+    },
+    {
+      "id": "L04",
+      "catégorie": "légitime transactionnel (colis)",
+      "label": 0,
+      "p": 0.2158,
+      "prédit": 0,
+      "zone": "incertain"
+    },
+    {
+      "id": "L05",
+      "catégorie": "légitime transactionnel (banque)",
+      "label": 0,
+      "p": 0.9953,
+      "prédit": 1,
+      "zone": "tranché"
+    },
+    {
+      "id": "L06",
+      "catégorie": "légitime marketing",
+      "label": 0,
+      "p": 0.0493,
+      "prédit": 0,
+      "zone": "tranché"
+    },
+    {
+      "id": "L07",
+      "catégorie": "légitime notification interne",
+      "label": 0,
+      "p": 0.0754,
+      "prédit": 0,
+      "zone": "tranché"
+    },
+    {
+      "id": "L08",
+      "catégorie": "légitime notification interne",
+      "label": 0,
+      "p": 0.0105,
+      "prédit": 0,
+      "zone": "tranché"
+    },
+    {
+      "id": "L09",
+      "catégorie": "légitime échange entre collègues",
+      "label": 0,
+      "p": 0.0002,
+      "prédit": 0,
+      "zone": "tranché"
+    },
+    {
+      "id": "L10",
+      "catégorie": "légitime invitation",
+      "label": 0,
+      "p": 0.0385,
+      "prédit": 0,
+      "zone": "tranché"
+    },
+    {
+      "id": "L11",
+      "catégorie": "légitime vocabulaire de phishing",
+      "label": 0,
+      "p": 0.0328,
+      "prédit": 0,
+      "zone": "tranché"
+    },
+    {
+      "id": "L12",
+      "catégorie": "légitime transactionnel alarmant",
+      "label": 0,
+      "p": 0.9929,
+      "prédit": 1,
+      "zone": "tranché"
+    }
+  ],
+  "catégories": {
+    "mini-jeu étendu (100)": [
+      {
+        "classe": "légitime",
+        "category": "agenda_rendez_vous",
+        "n": 5,
+        "signalés": 1,
+        "taux": 0.2,
+        "dans_zone": 3
+      },
+      {
+        "classe": "légitime",
+        "category": "avis_banque",
+        "n": 5,
+        "signalés": 5,
+        "taux": 1.0,
+        "dans_zone": 2
+      },
+      {
+        "classe": "légitime",
+        "category": "commande_livraison",
+        "n": 5,
+        "signalés": 4,
+        "taux": 0.8,
+        "dans_zone": 3
+      },
+      {
+        "classe": "légitime",
+        "category": "court_legitime",
+        "n": 5,
+        "signalés": 2,
+        "taux": 0.4,
+        "dans_zone": 2
+      },
+      {
+        "classe": "légitime",
+        "category": "echange_entre_collegues",
+        "n": 5,
+        "signalés": 0,
+        "taux": 0.0,
+        "dans_zone": 0
+      },
+      {
+        "classe": "légitime",
+        "category": "facture_recu_abonnement",
+        "n": 5,
+        "signalés": 4,
+        "taux": 0.8,
+        "dans_zone": 3
+      },
+      {
+        "classe": "légitime",
+        "category": "mot_de_passe_securite",
+        "n": 5,
+        "signalés": 4,
+        "taux": 0.8,
+        "dans_zone": 3
+      },
+      {
+        "classe": "légitime",
+        "category": "newsletter_marketing",
+        "n": 5,
+        "signalés": 5,
+        "taux": 1.0,
+        "dans_zone": 5
+      },
+      {
+        "classe": "légitime",
+        "category": "notification_interne_it_rh",
+        "n": 5,
+        "signalés": 1,
+        "taux": 0.2,
+        "dans_zone": 1
+      },
+      {
+        "classe": "légitime",
+        "category": "sensibilisation_securite",
+        "n": 5,
+        "signalés": 3,
+        "taux": 0.6,
+        "dans_zone": 3
+      },
+      {
+        "classe": "phishing",
+        "category": "alerte_banque_compte",
+        "n": 5,
+        "signalés": 5,
+        "taux": 1.0,
+        "dans_zone": 1
+      },
+      {
+        "classe": "phishing",
+        "category": "colis_peage_douane",
+        "n": 5,
+        "signalés": 5,
+        "taux": 1.0,
+        "dans_zone": 1
+      },
+      {
+        "classe": "phishing",
+        "category": "court_type_sms",
+        "n": 5,
+        "signalés": 5,
+        "taux": 1.0,
+        "dans_zone": 1
+      },
+      {
+        "classe": "phishing",
+        "category": "emploi_loterie_avance",
+        "n": 5,
+        "signalés": 5,
+        "taux": 1.0,
+        "dans_zone": 1
+      },
+      {
+        "classe": "phishing",
+        "category": "facture_paiement",
+        "n": 5,
+        "signalés": 5,
+        "taux": 1.0,
+        "dans_zone": 2
+      },
+      {
+        "classe": "phishing",
+        "category": "fil_de_discussion_detourne",
+        "n": 5,
+        "signalés": 1,
+        "taux": 0.2,
+        "dans_zone": 1
+      },
+      {
+        "classe": "phishing",
+        "category": "fraude_au_president_sans_lien",
+        "n": 5,
+        "signalés": 3,
+        "taux": 0.6,
+        "dans_zone": 2
+      },
+      {
+        "classe": "phishing",
+        "category": "identifiants_portail",
+        "n": 5,
+        "signalés": 5,
+        "taux": 1.0,
+        "dans_zone": 1
+      },
+      {
+        "classe": "phishing",
+        "category": "partage_document_signature",
+        "n": 5,
+        "signalés": 4,
+        "taux": 0.8,
+        "dans_zone": 4
+      },
+      {
+        "classe": "phishing",
+        "category": "qr_code_piece_jointe",
+        "n": 5,
+        "signalés": 3,
+        "taux": 0.6,
+        "dans_zone": 3
+      }
+    ]
+  },
+  "alertes": [
+    "mini-jeu étendu (100) : recall 0.820 < 0.9",
+    "mini-jeu étendu (100) : faux positifs 0.580 > 0.1",
+    "mini-jeu à la main (24) : recall 0.750 < 0.9 (jeu < 50 emails : indicatif)",
+    "mini-jeu à la main (24) : faux positifs 0.417 > 0.1 (jeu < 50 emails : indicatif)",
+    "  dont phishing modernes (P01-P12) : recall 0.750 < 0.9 (jeu < 50 emails : indicatif)",
+    "  dont légitimes difficiles (L01-L12) : faux positifs 0.417 > 0.1 (jeu < 50 emails : indicatif)",
+    "robustesse « tronqué à 12 mots » : dégradation > 5%",
+    "robustesse « texte neutre ajouté » : dégradation > 5%",
+    "robustesse « mots-raccourcis ajoutés aux phishings » : dégradation > 5%",
+    "robustesse « pied de newsletter ajouté aux légitimes » : dégradation > 5%"
+  ]
+}

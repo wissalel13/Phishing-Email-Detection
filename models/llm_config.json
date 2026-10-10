@@ -1,0 +1,17 @@
+{
+  "model": "qwen2.5:7b",
+  "prompt": "v1_zero_shot",
+  "strategy": "llm_seul",
+  "ml_threshold": 0.4648,
+  "uncertainty_band": [
+    0.1173,
+    0.9287
+  ],
+  "ollama_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_predict": 220,
+    "num_ctx": 4096
+  },
+  "max_chars": 1800
+}

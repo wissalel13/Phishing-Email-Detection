@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+python-whois
+tldextract
+xgboost
+python-Levenshtein
+beautifulsoup4
+tqdm
+
+fastapi>=0.110
+uvicorn>=0.30
+httpx>=0.27
